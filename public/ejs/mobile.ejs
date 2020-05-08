@@ -1,0 +1,192 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/app.css">
+  <script src="https://checkout.stripe.com/checkout.js" defer></script>
+  <script>
+    var stripePublicKey = '<%= stripePublicKey %>'
+  </script>
+
+
+</head>
+<body>
+  <nav id="navColor"class="navbar-light ">
+    <a id="title-first"class="navbar-brand" >VINEYARD OF GOD MINISTRIES</a>
+    <a id="title-second"class="navbar-brand" >GLORIOUS CENTER</a>
+    <br />
+    <a id="title-third"class="navbar-brand" >Castellon, Spain.</a>
+    <button id="left" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav" id="navbarExtended">
+        <li class="nav-item active">
+          <button class="nav-link home-btn" id="Menu-Button">Home</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="Menu-Button">Livestream</button>
+        </li>
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" id="Menu-Button" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Give
+          </button>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <button class="dropdown-item" >Partnership / Donation</button>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" id="Menu-Button" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About Us
+          </button>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <button class="dropdown-item" >Send Your Testimony</button>
+            <button class="dropdown-item" >The Mandate</button>
+            <button class="dropdown-item" >Activites</button>
+            <button class="dropdown-item" >Theme of The Month</button>
+            <button class="dropdown-item" >Theme of The Year</button>
+            <button class="dropdown-item" >Prayer Request</button>
+          </div>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="Menu-Button">Church Ministries</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="Menu-Button">Events</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="Menu-Button">Gallery</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" id="Menu-Button">Contact</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="home">
+    <h5 id="home-title">Vineyard  Tv Livestream</h5>
+    <iframe id="mainbody-article-video" src="https://www.youtube.com/embed/FterPNofFlI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h6>For Testionies and Enqueries<br />Please Call +34-631035007 Join Our Live Services on <br />Sunday's 11:00 <br />Tuesday's 19:30 <br /> Friday's 19:30 <br /> <br />Follow us on facebook @ Pastor Gloria Emuan Follow us on Youtube @ VINEYARDTV</h6>
+    <img id="year-logo" src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/81521959_2968056959879744_3008823499373412352_n.jpg?_nc_cat=107&_nc_sid=6e5ad9&_nc_ohc=p2enNDHf4cgAX8xWm_U&_nc_ht=scontent-mad1-1.xx&oh=0a8e80cc1e63b4554dee29cd32f44c4d&oe=5ED7E3D8" />
+  </div>
+  <div id="partnership">
+    <h1 id="title">Giving</h1>
+    <input id="Amount" type="number" placeholder="Write the amount the currency is Euros" />
+    <br />
+    <button id="giveButton">Pay With Card</button>
+  </div>
+  <div id="sendTestimony">
+    <h1 id="title-testimony">Send Your Testimony</h1>
+    <form method="POST" action="/mobileTestimony">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Your Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Testimony</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <button type="submit" class="btn btn-primary">Send Teestimony</button>
+    </form>
+  </div>
+  <div id="themandate">
+    <h1 id="title">Mandate</h1>
+    <p>IN NOVEMBER 29TH BY 5:40 AM , IN 2010 GOD SAID TO HER, I HAVE FOUND YOU GO AND HEAL THE DEAD PART OF MAN SINCE GOD HAVE BEEN GLORIFYING HIS NAME BY HEALING MEAN AS SHE TEACHES THE WORD OF GOD</p>
+  </div>
+
+  <div id="activities">
+    <h1 id="title">Activities</h1>
+    <p>Sunday, Glorious Service 11:00am <br /> Tuesday Service, Appointment With Grace 7:30pm <br /> Friday Service, Pray To Receive 7:30pm <br />First Friday Catch The Fire Night 8pm <br /> Every Last Is Thanksgiving Service <br />Every First Sunday Communion Service</p>
+
+  </div>
+
+  <div id="themeofthemonth">
+    <h1 id="title">Theme Of The Month</h1>
+    <img src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-0/p180x540/95254464_3253351144683656_7931662645512372224_o.jpg?_nc_cat=102&_nc_sid=110474&_nc_ohc=rufSLeDaQYUAX959KHo&_nc_ht=scontent-mad1-1.xx&_nc_tp=6&oh=9102c85fe4ea4baf148a5b16653bdc17&oe=5ED21017" id="themeofthemonthImage" />
+
+  </div>
+
+  <div id="themeoftheyear">
+    <h1 id="title">Theme Of The Year</h1>
+    <img id="themeoftheyearImage"src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/81521959_2968056959879744_3008823499373412352_n.jpg?_nc_cat=107&_nc_sid=6e5ad9&_nc_ohc=Aj1GtQwzPFIAX968lEZ&_nc_ht=scontent-mad1-1.xx&oh=6131292923b4e9f71bbe8a49f79b6e54&oe=5ECFFAD8" alt="">
+  </div>
+
+  <div id="prayerrequest">
+    <h1 id="title">Prayer Request</h1>
+    <form id="form" action="/mobileprayerrequest" method="post">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input name="name"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Write Your Name">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Email</label>
+        <input name="email"type="text" class="form-control" id="exampleInputPassword1" placeholder="Your email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Message</label>
+        <input name="testimony"type="text" class="form-control" id="exampleInputPassword1" placeholder="Message">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <div id="churchMinistries">
+    <img id="churchMummy"src="../images/churchministries.png" alt="">
+    <img id="themeoftheyearImage"src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/81521959_2968056959879744_3008823499373412352_n.jpg?_nc_cat=107&_nc_sid=6e5ad9&_nc_ohc=Aj1GtQwzPFIAX968lEZ&_nc_ht=scontent-mad1-1.xx&oh=6131292923b4e9f71bbe8a49f79b6e54&oe=5ECFFAD8" alt="">
+  </div>
+
+  <div id="events">
+    <img src="https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-0/p180x540/95254464_3253351144683656_7931662645512372224_o.jpg?_nc_cat=102&_nc_sid=110474&_nc_ohc=rufSLeDaQYUAX959KHo&_nc_ht=scontent-mad1-1.xx&_nc_tp=6&oh=9102c85fe4ea4baf148a5b16653bdc17&oe=5ED21017" id="themeofthemonthImage" />
+  </div>
+
+  <div id="gallery">
+    <h1 id="title">Gallery</h1>
+    <img src="https://lh3.googleusercontent.com/RjiemXX2-MCCmcnP_1Mh3-p16G4uLuaDov0HbX4PkjsPDmpRTfAnMpTGOlEHXDLCHM1LE8JOy_APuX9bYtQlfhgoEL7GG583ixMGUiEUFJ9wz99RlruA2-Ujm9jC-KvgiTXauVUUmakv5vb2BAdVTIHZNNF2qemUJchOvUs14hlM3HRjfnKSZU4AmiKCTbyLxPMVXdu5JNfhmFsLoF056jmARgGSVbc-Ko-ZmK-Dl_Gw6Fsa7Ue1UrDdB4pY6869BW0nEnozP9UE4F0iRYAMaCbNFtLaGXPsH8_0JD61-RoTi0ssDTsAQsLxM0f6-8q5Fl4c3gjvtSFDluSKAxt05iKuxDnq0Xd33AxFVGffbWy4EHxBPion1MO2Kaj0Xcb9wIOpuWd67S7c_xBGy-BCqeg36xn2CdAdsfE6Xi3PFSPZYm2AyGjolr467SkKV1ZpXe6KE-Hs1xCFBNzW71mUv0Bxy-k7PFBgxwKHoACy1HazIKy5WeKR7PkC_ju4kKwMmLEVnH26HowSEmzRAwG08fOtzlXcwAsPOsNWYKSumD0NV_x7zwRRL4w35jdT67guaf2lp7u9v0FiTzytdJI9wlUHHW7PhXEFBQK-VrT2aHhkW4JteHi6JtQoEDXjaMXebcRaycK0wv-bActtC_r2asZtXVngBMwDmZbqozilvr3XCUU0F9AfI9VBm7PGHY4=w1280-h854-no" id="DEFAULT_IMAGE_SIZE"alt="">
+
+
+  </div>
+
+  <div id="address">
+    <h1 id="title">Contact</h1>
+    <img id="call_icon" src="https://images.vexels.com/media/users/3/137415/isolated/preview/0e475bb9b17b3fa4f94f31fba1635b8f-telephone-call-icon-logo-by-vexels.png" alt="">
+    <div class="column">
+      <h3 id="call_id">Call +34-631315710</h3>
+    </div>
+    <form id="form" action="/mobilecontact" method="post">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input name="name"type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Write Your Name">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Email</label>
+        <input name="email"type="text" class="form-control" id="exampleInputPassword1" placeholder="Your email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Message</label>
+        <input name="testimony"type="text" class="form-control" id="exampleInputPassword1" placeholder="Message">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <div id="livestream-live">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h5 id="livestream-title">Live Stream</h5>
+    <iframe id="mainbody-article-video" src="https://www.youtube.com/embed/FterPNofFlI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  </div>
+
+
+
+
+
+  <script src="../js/mainApp.js" type="text/javascript"></script>
+</body>
+</html>
