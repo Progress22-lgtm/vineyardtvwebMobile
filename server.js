@@ -6,8 +6,8 @@ const app = express();
 const PORT = process.env.PORT || 3000
 const nodemailer = require("nodemailer")
 const bodyParser = require("body-parser")// declare the app settings
-const PublicKey = "pk_test_hbHEQQVlwyxT1gBiyygnfoKr00ZVtux3g5"
-const SecretKey = "sk_test_pF8fZHSESHedsbAfGR34ta2u00ZdVuPKxD"
+const PublicKey = "pk_live_6hl3S7R3PKC0nX7eTvOFpP8L00cZ3kO1x5"
+const SecretKey = "sk_live_oSgIjbgJ0jyNsWfqw9916huB00XVfR8SIt"
 const stripe = require("stripe")(SecretKey)
 
 app.set("views", "./public/ejs/")
