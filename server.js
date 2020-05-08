@@ -21,7 +21,7 @@ app.post("/donate", (req, res) => {
   stripe.charges.create({
     amount: amount,
     source: req.body.stripeTokenid,
-    currency: "eur"
+    currency: "EUR"
   }).then(() => {
     console.log("Succesfully Donated")
     res.json({
