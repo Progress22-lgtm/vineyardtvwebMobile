@@ -23,6 +23,33 @@ body{
 #title{
   margin-top: 20vh;
 }
+#facebook-social{
+  border: none;
+  height: 3.5vh;
+}
+#socials{
+}
+#youtube-social{
+  border: none;
+  height: 3.5vh;
+}
+#twitter-social{
+  border: none;
+  height: 3.5vh;
+}
+#facebook-btn{
+  border: none;
+  background: transparent;
+}
+#youtube-btn{
+  border: none;
+  background: transparent;
+}
+#twitter-btn{
+  border: none;
+  background: transparent;
+}
+
 #Amount{
   width: 100%;
   margin-bottom: 2vh;

@@ -1,17 +1,17 @@
 
-var home = document.getElementsByTagName('button')[1]
-var livestream = document.getElementsByTagName('button')[2]
-var donation = document.getElementsByTagName('button')[4]
-var sendYourTestimony = document.getElementsByTagName('button')[6]
-var themandate = document.getElementsByTagName('button')[7]
-var activities = document.getElementsByTagName('button')[8]
-var themeofthemonth = document.getElementsByTagName('button')[9]
-var themeoftheyear = document.getElementsByTagName('button')[10]
-var prayerrequest = document.getElementsByTagName('button')[11]
-var churchMinistries = document.getElementsByTagName('button')[12]
-var events = document.getElementsByTagName('button')[13]
-var gallery = document.getElementsByTagName('button')[14]
-var address = document.getElementsByTagName('button')[15]
+var home = document.getElementsByTagName('button')[4]
+var livestream = document.getElementsByTagName('button')[5]
+var donation = document.getElementsByTagName('button')[7]
+var sendYourTestimony = document.getElementsByTagName('button')[9]
+var themandate = document.getElementsByTagName('button')[10]
+var activities = document.getElementsByTagName('button')[11]
+var themeofthemonth = document.getElementsByTagName('button')[12]
+var themeoftheyear = document.getElementsByTagName('button')[13]
+var prayerrequest = document.getElementsByTagName('button')[14]
+var churchMinistries = document.getElementsByTagName('button')[15]
+var events = document.getElementsByTagName('button')[16]
+var gallery = document.getElementsByTagName('button')[17]
+var address = document.getElementsByTagName('button')[18]
 var homediv = document.getElementById('home')
 var livestreamdiv = document.getElementById("livestream-live")
 var givediv = document.getElementById('partnership')
@@ -25,7 +25,20 @@ var churchMinistriesdiv = document.getElementById('churchMinistries')
 var eventsdiv = document.getElementById('events')
 var gallerydiv = document.getElementById('gallery')
 var addressdiv = document.getElementById('address')
+var facebookApp = document.getElementById('facebook-btn')
+var youtubeApp = document.getElementById('youtube-btn')
+var twitter = document.getElementById('twitter-btn')
+var video = document.getElementById('mainbody-article-video')
 
+facebookApp.addEventListener("click", () => {
+  location.replace("https://facebook.com/pastgloriaemuan")
+})
+youtubeApp.addEventListener("click", () => {
+  location.replace("https://www.youtube.com/channel/UCmW4DuiW8ogML02oWJJwrog")
+})
+twitter.addEventListener("click", () => {
+  location.replace("https://twitter.com/gloriaemuan")
+})
 if( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)|| navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i)|| navigator.userAgent.match(/Windows Phone/i)){
 
 }else{
@@ -48,6 +61,7 @@ home.addEventListener("click", () => {
   addressdiv.style.display = "none"
 })
 livestream.addEventListener("click", () => {
+  video.src = video.src
   themandatediv.style.display = "none"
   homediv.style.display = "none"
   livestreamdiv.style.display = "block"
@@ -64,6 +78,7 @@ livestream.addEventListener("click", () => {
   addressdiv.style.display = "none"
 })
 donation.addEventListener("click", () => {
+  video.src = video.src
   themandatediv.style.display = "none"
   homediv.style.display = "none"
   livestreamdiv.style.display = "none"
@@ -80,6 +95,7 @@ donation.addEventListener("click", () => {
   addressdiv.style.display = "none"
 })
 sendYourTestimony.addEventListener("click", () => {
+  video.src = video.src
   themandatediv.style.display = "none"
   homediv.style.display = "none"
   livestreamdiv.style.display = "none"
@@ -96,6 +112,7 @@ sendYourTestimony.addEventListener("click", () => {
   addressdiv.style.display = "none"
 })
 activities.addEventListener("click", () => {
+  video.src = video.src
   themandatediv.style.display = "none"
   homediv.style.display = "none"
   livestreamdiv.style.display = "none"
@@ -112,6 +129,7 @@ activities.addEventListener("click", () => {
   addressdiv.style.display = "none"
 })
 themeofthemonth.addEventListener("click", () => {
+  video.src = video.src
   themandatediv.style.display = "none"
   homediv.style.display = "none"
   livestreamdiv.style.display = "none"
@@ -128,6 +146,7 @@ themeofthemonth.addEventListener("click", () => {
   addressdiv.style.display = "none"
 })
 themeoftheyear.addEventListener("click", () => {
+  video.src = video.src
   themandatediv.style.display = "none"
   homediv.style.display = "none"
   livestreamdiv.style.display = "none"
@@ -144,6 +163,7 @@ themeoftheyear.addEventListener("click", () => {
   addressdiv.style.display = "none"
 })
 prayerrequest.addEventListener("click", () => {
+  video.src = video.src
   themandatediv.style.display = "none"
   homediv.style.display = "none"
   livestreamdiv.style.display = "none"
@@ -160,6 +180,7 @@ prayerrequest.addEventListener("click", () => {
   addressdiv.style.display = "none"
 })
 churchMinistries.addEventListener("click", () => {
+  video.src = video.src
   themandatediv.style.display = "none"
   homediv.style.display = "none"
   livestreamdiv.style.display = "none"
@@ -175,6 +196,7 @@ churchMinistries.addEventListener("click", () => {
   addressdiv.style.display = "none"
 })
 themandate.addEventListener("click", () => {
+  video.src = video.src
   homediv.style.display = "none"
   livestreamdiv.style.display = "none"
   givediv.style.display = "none"
@@ -190,6 +212,7 @@ themandate.addEventListener("click", () => {
   addressdiv.style.display = "none"
 })
 events.addEventListener("click", () => {
+  video.src = video.src
   themandatediv.style.display = "none"
   homediv.style.display = "none"
   livestreamdiv.style.display = "none"
@@ -207,6 +230,7 @@ events.addEventListener("click", () => {
   addressdiv.style.display = "none"
 })
 gallery.addEventListener("click", () => {
+  video.src = video.src
   themandatediv.style.display = "none"
   homediv.style.display = "none"
   livestreamdiv.style.display = "none"
@@ -221,6 +245,7 @@ gallery.addEventListener("click", () => {
   addressdiv.style.display = "none"
 })
 address.addEventListener("click", () => {
+  video.src = video.src
   themandatediv.style.display = "none"
   homediv.style.display = "none"
   livestreamdiv.style.display = "none"
